@@ -110,7 +110,7 @@ body {
   height: 100px;
 }
 
-.loaderbar {
+.loader__bar {
   position: absolute;
   bottom: 0;
   width: 10px;
@@ -120,31 +120,31 @@ body {
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.loaderbar:nth-child(1) {
+.loader__bar:nth-child(1) {
   left: 0px;
   transform: scale(1, 0.2);
   animation: barUp1 4s infinite;
 }
 
-.loaderbar:nth-child(2) {
+.loader__bar:nth-child(2) {
   left: 15px;
   transform: scale(1, 0.4);
   animation: barUp2 4s infinite;
 }
 
-.loaderbar:nth-child(3) {
+.loader__bar:nth-child(3) {
   left: 30px;
   transform: scale(1, 0.6);
   animation: barUp3 4s infinite;
 }
 
-.loaderbar:nth-child(4) {
+.loader__bar:nth-child(4) {
   left: 45px;
   transform: scale(1, 0.8);
   animation: barUp4 4s infinite;
 }
 
-.loaderbar:nth-child(5) {
+.loader__bar:nth-child(5) {
   left: 60px;
   transform: scale(1, 1);
   animation: barUp5 4s infinite;
