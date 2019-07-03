@@ -3,30 +3,53 @@
 }
 
 body {
-  background-color: orange;
-  color: white;
   display: flex;
-  flex-direction: column;
+  background-color: #FF9907;
+  color: white;
   align-items: center;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
+
+}
+
+.loaders {
+  display: flex;
+  width: 50vw;
+  margin: 0.5vw auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
   
-h1 {
+h1 {  
   font-weight: 600;
 }
-.container, .container1 {
+
+.container {
   display: flex;
+  max-width: 40vw;
+  min-width: 360px;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  height: 10vh;
+  position: relative;
+  margin: 2.4vw auto 0;
 }
 
 .loader {
-  border: 16px solid #f3f3f3; 
-  border-top: 16px solid #3498db; 
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
+  position: relative;
+  margin: 0; 
+  height: 60px;
 }
+
+.loader1 {
+  width: 100px;
+  height: 40px;
+  position: relative;
+}
+
 
 .loading-text {
   font-family: sans-serif;
@@ -34,6 +57,8 @@ h1 {
   display: inline-block;
   margin-left: 5px;
   font-size: 14px;
+  font-family: sans-serif;
+  font: 400 1em/1em 'Monserrat', sans-serif;
 }
   
 .spring-ball {
@@ -76,7 +101,6 @@ h1 {
   width: 40px;
   height: 40px;
   position: relative;
-  margin: 100px auto;
 }
   
 .double-bounce1, .double-bounce2 {
@@ -110,7 +134,7 @@ h1 {
 
 .loader4 {
   position: relative;
-  width: 75px;
+  width: 65px;
   height: 100px;
 }
 
@@ -312,7 +336,7 @@ h1 {
   display: inline-block;
   position: relative;
   width: 64px;
-  height: 64px;
+  height: 40px;
 }
 .loader5 div {
   position: absolute;
@@ -367,7 +391,6 @@ h1 {
 
 
 .loader6 {
-  margin: 100px auto;
   width: 40px;
   height: 40px;
   position: relative;
