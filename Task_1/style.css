@@ -47,11 +47,10 @@ h1 {
 }
 
 .loading-text {    
-  color: #fff;
   display: inline-block;
   margin-left: 5px;    
-  font: 600 1em/1em 'Monserrat', sans-serif;
-  font-weight: 100;
+  font: 400 1em/1em 'Monserrat', sans-serif;
+  color: rgb(250, 250, 250, 0.7);
 }
   
 .spring-ball {    
