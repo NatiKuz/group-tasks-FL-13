@@ -1,0 +1,40 @@
+.parallelogram_img {
+    width: 160px;
+    height: 80px;
+    transform: skew(-20deg);
+    border: #000 2px solid;
+    }
+    
+.circle_img {
+    width: 100px;
+    height: 100px;
+    border: #000 2px solid;
+    border-radius: 50%
+    }
+    
+.oval_img {
+    width: 160px;
+    height: 100px;
+    border: #000 2px solid;
+    border-radius: 100px / 50px;
+    }
+    
+.square_img {
+    width: 100px;
+    height: 100px;
+    border: #000 2px solid;
+    }
+    
+.rectangle_img {
+    width: 160px;
+    height: 100px;
+    border: #000 2px solid;
+    }
+    
+.triangle_img {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #000;
+    border-right: 100px solid transparent;
+    outline-color: #000;
+    }
