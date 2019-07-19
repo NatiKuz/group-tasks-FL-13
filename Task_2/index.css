@@ -32,8 +32,7 @@ a {
     max-width: 200px;
     max-height: 200px;
     max-width: 200px;
-    max-height: 200px;
- 
+    max-height: 200px; 
 }
 
 .ui {
@@ -71,10 +70,13 @@ a {
     margin: 20px;    
 }
 
+
 #parallelogram_img {
     width: 160px;
-    height: 80px;
-    transform: skew(-20deg);
+    min-height: 80px;
+    max-height: 160px;
+    max-width: 160px;
+    transform: matrix(1,0,-0.5,1,0,0);
     border: #000 2px solid;
 }
     
