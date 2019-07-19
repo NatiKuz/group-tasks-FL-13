@@ -114,35 +114,26 @@ function calcRectangle() {
 
     let a = parseFloat(document.getElementById('triangleSideA').value);
     document.getElementById('triangle_sideA').innerHTML = a;
-    console.log('a=' + a);
     let b = parseFloat(document.getElementById('triangleSideB').value);
     document.getElementById('triangle_sideB').innerHTML = b;
-    console.log('b=' + b);
     let c = Math.sqrt(a * a + b * b);
     document.getElementById('triangle_sideC').innerHTML = Math.round(c);
-    console.log('c=' + c);
     let h = a * b /c;
     document.getElementById('triangle_Height').innerHTML = Math.round(h);
-    console.log('h=' + h);
     const angleC = 90;
     document.getElementById('triangle_angleC').innerHTML = angleC;
-    console.log('angleC=' + angleC);
-    let angleA = Math.asin(a/c)*angle180/Math.PI;
+    let angleA = Math.sin(a/c)*angle180/Math.PI;
     document.getElementById('triangle_angleA').innerHTML = Math.round(angleA);
-    console.log('angleA=' + angleA);
     let angleB = angleC - angleA;
     document.getElementById('triangle_angleB').innerHTML = Math.round(angleB);
-    console.log('angleB=' + angleB);
     let S = Math.round(a*b/byTwo);
     document.getElementById('triangle_Area').innerHTML = S;
-    console.log('S=' + S);
-    return [a, b];
   }
 
   function drawTriangle(){
     const size150 = 150;
     const size200 = 150;
-    const step10 = 10;
+    const start = 10;
     const stroke = 2;
 
     let canvas = document.getElementById('canvas');
@@ -162,10 +153,10 @@ function calcRectangle() {
     ctx.strokeStyle = 'black';
     ctx.lineWidth = stroke;
     ctx.beginPath();
-    ctx.moveTo(step10, step10);
-    ctx.lineTo(step10, h);
-    ctx.lineTo(w, h);
-    ctx.lineTo(step10,step10);
+    ctx.moveTo(start, start);
+    ctx.lineTo(start, start + h);
+    ctx.lineTo(start + w, start + h);
+    ctx.lineTo(start,start);
     ctx.stroke();
   }
   
