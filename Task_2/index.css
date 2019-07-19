@@ -106,10 +106,11 @@ a {
     border: #000 2px solid;
 }
     
-#triangle_img {
-    width: 0;
-    height: 0;
-    border-bottom: 100px solid #000;
-    border-right: 100px solid transparent;
-    outline-color: #000;
+.triangle>.title{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.triangle>.title:first-child{
+   margin-left: 0px; 
 }

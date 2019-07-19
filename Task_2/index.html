@@ -11,7 +11,7 @@
     <div class="wrapper">
 
         <div class="parallelogram block">
-            
+
             <div id="parallelogram_img" class="img-mod"></div>
 
             <div class="parallelogram ui">
@@ -132,32 +132,51 @@
 
         <div class="triangle block">
 
-            <div id="triangle_img" class="img-mod"></div>
-
-            <div class="triangle ui">
-                <form id="triangle_form" class="form">
-                    <label for="triangleSideA">A: </label>
-                    <input type="number" name="triangleSideA" value="100" id="triangleSideA">
-                    <label for="triangleSideB">B: </label>
-                    <input type="number" name="triangleSideB" value="100" id="triangleSideB">
-                </form>
-
-                <div class="triangle output">
-                    <p class="triangle title">a: 
-                        <span id="triangle_AngleA">-</span>
-                    </p>                 
-                    <p class="triangle title">b: 
-                        <span id="triangle_AngleB">-</span>
-                    </p>   
-                    <p class="triangle title">c: 
-                        <span id="triangle_AngleC">-</span>
-                    </p>   
+                <div id="triangle_img" class="img-mod">
+                    <canvas id="canvas" width="200" height="200"></canvas>
                 </div>
-            </div>
+
+                <div class="triangle ui">
+                    <form action="#" class="triangle form">
+                        <label for="triangleSideA">A:</label>
+                        <input type="number" value="5" id="triangleSideA">
+
+                        <label for="triangleB">B:</label>
+                        <input type="number" value="7" id="triangleSideB">                       
+                    </form>
+
+                    <div class="triangle output">
+                        <span class="triangle title">a: </span>
+                        <span id="triangle_sideA">-</span>
+
+                        <span class="triangle title">b: </span>
+                        <span id="triangle_sideB">-</span>
+
+                        <span class="triangle title">c: </span>
+                        <span id="triangle_sideC">-</span>
+
+                        <span class="triangle title">h<sub>c</sub>: </span>
+                        <span id="triangle_Height">-</span>
+                    
+                        <span class="triangle title">angle A: </span>
+                        <span id="triangle_angleA">-</span>
+
+                        <span class="triangle title">angle B: </span>
+                        <span id="triangle_angleB">-</span>
+
+                        <span class="triangle title">angle C: </span>
+                        <span id="triangle_angleC">-</span>                    
+
+                        <span class="triangle title">Area: </span>
+                        <span id="triangle_Area">-</span>
+                    </div>
+                </div>
         </div>
 
         <div class="button_block">
-            <button type="submit" onclick="calcAll()">Calculate</button>
+            <label for="instantCalc">Instant calculation</label>
+            <input type="checkbox" name="instantCalc" id="instantCalc">
+            <button type="submit" onclick="calcAll()" id="btnCalc">Calculate</button>
         </div>
 
     </div>
