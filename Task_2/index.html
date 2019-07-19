@@ -11,53 +11,78 @@
     <div class="wrapper">
 
         <div class="parallelogram block">
-            <div class="parallelogram_img img-mod"></div>
+            <div id="parallelogram_img" class="img-mod"></div>
 
             <div class="parallelogram ui">
-                <form action="#" class="parallelogram form">
-                    <label for="parallelogramSideA">A:</label>
-                    <input type="number" value="10" id="parallelogramSideA">
+                <form action="#" id="parallelogram_form" class="form">
+                    <label for="parallelogramSideA">A: </label>
+                    <input type="number" name="parallelogramSideA" value="10" id="parallelogramSideA">
 
-                    <label for="parallelogramSideB">B:</label>
+                    <label for="parallelogramSideB">B: </label>
                     <input type="number" value="20" id="parallelogramSideB">
 
-                    <label for="parallelogramAngle">Angle:</label>
-                    <input type="number" value="50" id="parallelogramAngle">
+                    <label for="parallelogramAngle">Angle: </label>
+                    <input type="number"  name="parallelogramSideB" value="50" id="parallelogramAngle">
                 </form>
 
-                <div class="parallelogram output">
-                    <span class="parallelogram title">Area: </span>
-                    <span id="parallelogram_Area">-</span>
 
-                    <span class="parallelogram title">h: </span>
-                    <span id="parallelogram_Height">-</span>
+                <div class="parallelogram output">
+                    <p class="parallelogram title">Area: 
+                        <span id="parallelogram_Area">-</span>
+                    </p>
+
+                    <p class="parallelogram title">h: 
+                        <span id="parallelogram_Height">-</span>
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="circle block">
 
-                <div class="circle_img img-mod"></div>
+                <div id="circle_img" class="img-mod"></div>
     
                 <div class="circle ui">
-                    <form action="#" class="circle form">
+                    <form action="#" id="circle_form" class="form">
                         <label for="circleRadius">R:</label>
                         <input type="number" value="4" id="circleRadius">
-    
                     </form>
     
                     <div class="circle output">
-                        <span class="circle title">Area: </span>
-                        <span id="circle_Area">-</span>
+                        <p class="circle title">Area: 
+                            <span id="circle_Area">-</span>
+                        </p>
     
-                        <span class="circle title">L: </span>
-                        <span id="circle_Length">-</span>
+                        <p class="circle title">L: 
+                            <span id="circle_Length">-</span>
+                        </p>
                     </div>
                 </div>
         </div>
 
+        <div class="square block">
+
+            <div id="square_img" class="img-mod"></div>
+
+            <div class="square ui">
+                <form id="square_form" class="form">
+                    <label for="squareSideA">A: </label>
+                    <input type="number" name="squareSideA" value="100" id="squareSideA">
+                </form>
+
+                <div class="square output">
+                    <p class="square title">Diagonal: 
+                        <span id="square_Diagonal">-</span>
+                    </p>                 
+                    <p class="square title">Area: 
+                        <span id="square_Area">-</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="button_block">
-                <button form="#">Calculate</button>
+            <button form="#" type="submit" onclick="calcAll()">Calculate</button>
         </div>
 
     </div>

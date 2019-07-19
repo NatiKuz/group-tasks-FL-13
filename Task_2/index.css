@@ -1,2 +1,113 @@
-@import "style.css";
-@import "figures.css";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	position: relative;
+}
+
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.block {
+    border-bottom: 1px solid black;
+    padding: 20px;
+    display: flex;
+}
+
+.img-mod {
+    margin: 20px;
+    max-width: 200px;
+    max-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+ 
+}
+
+.ui {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    margin: 20px;
+
+}
+
+.form input {
+    width: 50px;
+    margin-right: 20px
+}
+
+.output {
+    display: flex;
+    margin: 20px;
+}
+
+.title {
+    margin-right: 50px
+}
+
+.button_block {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button_block button {
+    width: 150px;
+    height: 50px;
+    margin: 20px;    
+}
+
+#parallelogram_img {
+    width: 160px;
+    height: 80px;
+    transform: skew(-20deg);
+    border: #000 2px solid;
+}
+    
+#circle_img {
+    width: 100px;
+    height: 100px;
+    border: #000 2px solid;
+    border-radius: 50%
+}
+    
+#oval_img {
+    width: 160px;
+    height: 100px;
+    border: #000 2px solid;
+    border-radius: 100px / 50px;
+}
+    
+#square_img {
+    width: 100px;
+    height: 100px;
+    border: #000 2px solid;
+}
+    
+#rectangle_img {
+    width: 160px;
+    height: 100px;
+    border: #000 2px solid;
+}
+    
+#triangle_img {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #000;
+    border-right: 100px solid transparent;
+    outline-color: #000;
+}
