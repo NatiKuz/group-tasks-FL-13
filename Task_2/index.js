@@ -159,8 +159,6 @@ function calcRectangle() {
   
   drawTriangle();
 
-
-
 function calcAll() {
     calcParal();
     calcOval();
@@ -170,3 +168,26 @@ function calcAll() {
     calcTriangle();
     drawTriangle();
   }
+
+
+  let checkInstant = document.getElementById('instantCalc');
+  let btnCalc = document.getElementById('btnCalc');
+  
+  function instantCalc() {
+    btnCalc.disabled = this.checked;
+    if(this.checked) {
+      document.addEventListener('input', calcAll);
+      // doInstantCalc();
+    } else {
+      document.removeEventListener('input', calcAll);
+      // stopInstantCalc();
+    }
+  }
+  
+  function doInstantCalc() {
+    document.addEventListener('input', calcAll);
+  }
+  function stopInstantCalc() {
+    document.removeEventListener('input', calcAll);
+  }
+  checkInstant.addEventListener('change', instantCalc);
