@@ -60,6 +60,31 @@
                 </div>
         </div>
 
+        <div class="oval block">
+
+            <div id="oval_img" class="img-mod"></div>
+
+            <div class="oval ui">
+                <form action="#" id="oval_form" class="form">
+                    <label for="ovalHRadius">Horizontal R:</label>
+                    <input type="number" value="11" id="ovalHRadius">
+
+                    <label for="ovalVRadius">Vertical R:</label>
+                    <input type="number" value="5" id="ovalVRadius">
+                </form>
+
+                <div class="oval output">
+                    <p class="oval title">Area: 
+                        <span id="oval_Area">-</span>
+                    </p>
+
+                    <p class="oval title">L: 
+                        <span id="oval_Length">-</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="square block">
 
             <div id="square_img" class="img-mod"></div>
@@ -81,8 +106,57 @@
             </div>
         </div>
 
+        <div class="rectangle block">
+
+            <div id="rectangle_img" class="img-mod"></div>
+
+            <div class="rectangle ui">
+                <form id="rectangle_form" class="form">
+                    <label for="rectangleSideA">A: </label>
+                    <input type="number" name="rectangleSideA" value="100" id="rectangleSideA">
+                    <label for="rectangleSideB">B: </label>
+                    <input type="number" name="rectangleSideB" value="100" id="rectangleSideB">
+                </form>
+
+                <div class="rectangle output">
+                    <p class="rectangle title">Diagonal: 
+                        <span id="rectangle_Diagonal">-</span>
+                    </p>                 
+                    <p class="rectangle title">Area: 
+                        <span id="rectangle_Area">-</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle block">
+
+            <div id="triangle_img" class="img-mod"></div>
+
+            <div class="triangle ui">
+                <form id="triangle_form" class="form">
+                    <label for="triangleSideA">A: </label>
+                    <input type="number" name="triangleSideA" value="100" id="triangleSideA">
+                    <label for="triangleSideB">B: </label>
+                    <input type="number" name="triangleSideB" value="100" id="triangleSideB">
+                </form>
+
+                <div class="triangle output">
+                    <p class="triangle title">a: 
+                        <span id="triangle_AngleA">-</span>
+                    </p>                 
+                    <p class="triangle title">b: 
+                        <span id="triangle_AngleB">-</span>
+                    </p>   
+                    <p class="triangle title">c: 
+                        <span id="triangle_AngleC">-</span>
+                    </p>   
+                </div>
+            </div>
+        </div>
+
         <div class="button_block">
-            <button form="#" type="submit" onclick="calcAll()">Calculate</button>
+            <button type="submit" onclick="calcAll()">Calculate</button>
         </div>
 
     </div>

@@ -12,13 +12,14 @@ function calcCircle() {
   
   
 function calcSquare() {
-    let a = parseFloat(document.getElementById("squareSideA").value);
+    let a = parseFloat(document.getElementById('squareSideA').value);
     let squareArea = a * a;
-    let squareDiagonal = Math.round(a * Math.sqrt(2));
-    document.getElementById("square_Area").innerHTML = squareArea;
-    document.getElementById("square_Diagonal").innerHTML = squareDiagonal;
+    const TWO = 2;
+    let squareDiagonal = Math.round(a * Math.sqrt(TWO));
+    document.getElementById('square_Area').innerHTML = squareArea;
+    document.getElementById('square_Diagonal').innerHTML = squareDiagonal;
 
-    let fig = document.getElementById("square_img");
+    let fig = document.getElementById('square_img');
     fig.style.width = a + 'px'; 
     fig.style.height = a + 'px';
   }
