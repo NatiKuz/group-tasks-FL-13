@@ -64,9 +64,20 @@ function calcOval() {
 }
 
 function calcCircle() {
-    console.log('Circle In Progress')
-}
+  const numAccTo = 3;
+  let radius = document.getElementById('circleRadius').value;
+  let circleArea = (radius * radius * Math.PI).toFixed(numAccTo);
+  const NUMBER_TWO = 2;
+  let circumference = (NUMBER_TWO * Math.PI * radius).toFixed(numAccTo);
   
+  document.getElementById('circle_Area').innerHTML = circleArea;
+  document.getElementById('circle_Length').innerHTML = circumference;
+  
+  let figCircle = document.getElementById('circle_img');
+  figCircle.style.width = radius * NUMBER_TWO + 'px'; 
+  figCircle.style.height = radius * NUMBER_TWO + 'px';
+  
+  }
   
 function calcSquare() {
     let a = parseFloat(document.getElementById('squareSideA').value);
@@ -100,6 +111,7 @@ function calcRectangle() {
   function calcTriangle(){
     const angle180 = 180;
     const byTwo = 2;
+
     let a = parseFloat(document.getElementById('triangleSideA').value);
     document.getElementById('triangle_sideA').innerHTML = a;
     console.log('a=' + a);
