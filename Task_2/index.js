@@ -20,6 +20,8 @@ function calcParal() {
   let parallelogramArea = 0;
   let parallelogramHeight = 0;
 
+
+
   if(angle === angle90) {
     parallelogramArea = Math.abs(sideA * sideB).toFixed(numAccTo);
     parallelogramHeight = Math.abs(sideB.toFixed(numAccTo));
@@ -207,7 +209,6 @@ function calcAll() {
     drawTriangle();    
   }
 
-// INSTANT_CALCULATION
 
   let checkInstant = document.getElementById('instantCalc');
   let btnCalc = document.getElementById('btnCalc');
@@ -221,64 +222,4 @@ function calcAll() {
     }
   }
   
-<<<<<<< HEAD
-  function doInstantCalc() {
-    document.addEventListener('input', calcAll);
-  }
-  function stopInstantCalc() {
-    document.removeEventListener('input', calcAll);
-  }
   checkInstant.addEventListener('change', instantCalc);
-
-
-// EVENTLISTENERS
-
-function resetValueParal() {
-  document.getElementById('parallelogram_Area').innerHTML = '-';
-  document.getElementById('parallelogram_Height').innerHTML = '-';
-} 
-
-function resetValueCircle() {
-  document.getElementById('circle_Area').innerHTML = '-';
-  document.getElementById('circle_Length').innerHTML = '-';
-} 
-
-function resetValueEllipse() {
-  document.getElementById('ellipse_Area').innerHTML = '-';
-  document.getElementById('ellipse_Length').innerHTML = '-';
-} 
-
-function resetValueSquare() {
-  document.getElementById('square_Diagonal').innerHTML = '-';
-  document.getElementById('square_Area').innerHTML = '-';
-} 
-
-function resetValueSquare() {
-  document.getElementById('square_Diagonal').innerHTML = '-';
-  document.getElementById('square_Area').innerHTML = '-';
-} 
-
-
-function resetValueRectangle() {
-  document.getElementById('rectangle_Diagonal').innerHTML = '-';
-  document.getElementById('rectangle_Area').innerHTML = '-';
-} 
-
-function resetValueTriangle() {
-  document.getElementById('triangle_sideA').innerHTML = '-';
-  document.getElementById('triangle_sideB').innerHTML = '-';
-  // document.getElementById('triangle_sideB').innerHTML = '-';
-  document.getElementById('triangle_sideC').innerHTML = '-';
-  document.getElementById('triangle_Height').innerHTML = '-';
-  document.getElementById('triangle_angleA').innerHTML = '-';
-  document.getElementById('triangle_angleB').innerHTML = '-';
-  document.getElementById('triangle_angleC').innerHTML = '-';
-  document.getElementById('triangle_Area').innerHTML = '-';
-
-
-
-
-} 
-=======
-  checkInstant.addEventListener('change', instantCalc);
->>>>>>> e4c5c02b2f33111cefbaa8319f6af835fac0573d
