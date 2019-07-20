@@ -200,6 +200,7 @@ function calcRectangle() {
 
 function calcAll() {
     calcParal();
+    drawParallelogram();
     calcEllipse();
     calcCircle();
     calcSquare();
