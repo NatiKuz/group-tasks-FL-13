@@ -16,7 +16,7 @@
                     </div>
         
                     <div class="parallelogram ui">
-                        <form action="#" class="parallelogram form">
+                        <form oninput="resetValueParal()" class="parallelogram form">
                             <label for="parallelogramSideA">A:</label>
                             <input type="number" value="10" id="parallelogramSideA">
         
@@ -28,11 +28,12 @@
                         </form>
         
                         <div class="parallelogram output">
-                            <span class="parallelogram title">Area: </span>
-                            <span id="parallelogram_Area">-</span>
-        
-                            <span class="parallelogram title">h: </span>
-                            <span id="parallelogram_Height">-</span>
+                            <p class="parallelogram title">Area: 
+                                <span id="parallelogram_Area">-</span>
+                            </p>    
+                            <p class="parallelogram title">h: 
+                                <span id="parallelogram_Height">-</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +43,7 @@
                 <div id="circle_img" class="img-mod"></div>
     
                 <div class="circle ui">
-                    <form action="#" id="circle_form" class="form">
+                    <form oninput="resetValueCircle()" id="circle_form" class="form">
                         <label for="circleRadius">R:</label>
                         <input type="number" value="30" id="circleRadius">
                     </form>
@@ -66,7 +67,7 @@
             </div>
 
             <div class="ellipse ui">
-                <form action="#" id="oval_form" class="form">
+                <form oninput="resetValueEllipse()" id="oval_form" class="form">
                     <label for="ellipseHRadius">Horizontal R:</label>
                     <input type="number" value="55" id="ellipseHRadius">
 
@@ -91,7 +92,7 @@
             <div id="square_img" class="img-mod"></div>
 
             <div class="square ui">
-                <form id="square_form" class="form">
+                <form oninput="resetValueSquare()" id="square_form" class="form">
                     <label for="squareSideA">A: </label>
                     <input type="number" name="squareSideA" value="100" id="squareSideA">
                 </form>
@@ -112,7 +113,7 @@
             <div id="rectangle_img" class="img-mod"></div>
 
             <div class="rectangle ui">
-                <form id="rectangle_form" class="form">
+                <form oninput="resetValueRectangle()" id="rectangle_form" class="form">
                     <label for="rectangleSideA">A: </label>
                     <input type="number" name="rectangleSideA" value="100" id="rectangleSideA">
                     <label for="rectangleSideB">B: </label>
@@ -137,7 +138,7 @@
                 </div>
 
                 <div class="triangle ui">
-                    <form action="#" class="triangle form">
+                    <form oninput="resetValueTriangle()" class="triangle form">
                         <label for="triangleSideA">A:</label>
                         <input type="number" value="5" id="triangleSideA">
 

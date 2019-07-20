@@ -246,11 +246,6 @@ function resetValueSquare() {
   document.getElementById('square_Area').innerHTML = '-';
 } 
 
-function resetValueSquare() {
-  document.getElementById('square_Diagonal').innerHTML = '-';
-  document.getElementById('square_Area').innerHTML = '-';
-} 
-
 function resetValueRectangle() {
   document.getElementById('rectangle_Diagonal').innerHTML = '-';
   document.getElementById('rectangle_Area').innerHTML = '-';
@@ -259,7 +254,6 @@ function resetValueRectangle() {
 function resetValueTriangle() {
   document.getElementById('triangle_sideA').innerHTML = '-';
   document.getElementById('triangle_sideB').innerHTML = '-';
-  // document.getElementById('triangle_sideB').innerHTML = '-';
   document.getElementById('triangle_sideC').innerHTML = '-';
   document.getElementById('triangle_Height').innerHTML = '-';
   document.getElementById('triangle_angleA').innerHTML = '-';
