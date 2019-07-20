@@ -10,34 +10,32 @@
 <body>
     <div class="wrapperrs">
 
-        <div class="parallelogram block">
-
-            <div id="parallelogram_img" class="img-mod"></div>
-
-            <div class="parallelogram ui">
-                <form oninput='resetValueParal()' id="parallelogram_form" class="form">
-                    <label for="parallelogramSideA">A: </label>
-                    <input type="number" name="parallelogramSideA" value="10" id="parallelogramSideA">
-
-                    <label for="parallelogramSideB">B: </label>
-                    <input type="number" value="20" id="parallelogramSideB">
-
-                    <label for="parallelogramAngle">Angle: </label>
-                    <input type="number"  name="parallelogramSideB" value="50" id="parallelogramAngle">
-                </form>
-
-
-                <div class="parallelogram output">
-                    <p class="parallelogram title">Area: 
-                        <span id="parallelogram_Area">-</span>
-                    </p>
-
-                    <p class="parallelogram title">h: 
-                        <span id="parallelogram_Height">-</span>
-                    </p>
+            <div class="parallelogram block">
+                    <div #="parallelogram_img img-mod">
+                        <canvas id="canvas_parallelogram" width="200" height="200"></canvas>
+                    </div>
+        
+                    <div class="parallelogram ui">
+                        <form action="#" class="parallelogram form">
+                            <label for="parallelogramSideA">A:</label>
+                            <input type="number" value="10" id="parallelogramSideA">
+        
+                            <label for="parallelogramSideB">B:</label>
+                            <input type="number" value="20" id="parallelogramSideB">
+        
+                            <label for="parallelogramAngle">Angle:</label>
+                            <input type="number" value="50" id="parallelogramAngle">
+                        </form>
+        
+                        <div class="parallelogram output">
+                            <span class="parallelogram title">Area: </span>
+                            <span id="parallelogram_Area">-</span>
+        
+                            <span class="parallelogram title">h: </span>
+                            <span id="parallelogram_Height">-</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
         <div class="circle block">
 
