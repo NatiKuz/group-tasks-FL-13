@@ -80,11 +80,13 @@ function drawParallelogram(){
   drawParallelogram();
 
 function calcEllipse() {
-  const hR = document.getElementById('ellipseHRadius');
-  const vR = document.getElementById('ellipseVRadius');
-  const ellipse_Length = document.getElementById('ellipse_Length');
-  const ellipse_Area = document.getElementById('ellipse_Area');
-  ellipse_Length.textContent = parseInt(2 * Math.PI * Math.sqrt((Math.pow(hR.value, 2) + Math.pow(vR.value, 2)) / 2));
+  let hR = document.getElementById('ellipseHRadius');
+  let vR = document.getElementById('ellipseVRadius');
+  let ellipse_Length = document.getElementById('ellipse_Length');
+  let ellipse_Area = document.getElementById('ellipse_Area');
+  const T = 2;
+  
+  ellipse_Length.textContent = parseInt(T * Math.PI * Math.sqrt((Math.pow(hR.value, T) + Math.pow(vR.value, T)) / T));
   ellipse_Area.textContent = parseInt(Math.PI * hR.value * vR.value);
   drawEllipse();
 }
@@ -94,6 +96,11 @@ function drawEllipse() {
   const ellipseVRadius = document.getElementById('ellipseVRadius');
   
   const canvasDiv = document.getElementById('ellipse_img');
+  
+  const T = 2;
+  const X = 80;
+  const Y = 60;
+  
   let canvasEllipse = document.getElementById('canvasEllipse');
   canvasDiv.removeChild(canvasEllipse);
   canvasEllipse = document.createElement('canvas');
@@ -102,9 +109,9 @@ function drawEllipse() {
   canvasEllipse.setAttribute('height', '150');
   canvasDiv.appendChild(canvasEllipse);
   const ctx = canvasEllipse.getContext('2d');
-  ctx.lineWidth = 2;
+  ctx.lineWidth = T;
   ctx.beginPath();
-  ctx.ellipse(80, 60, ellipseHRadius.value, ellipseVRadius.value, 0, 0, 2 * Math.PI);
+  ctx.ellipse(X, Y, ellipseHRadius.value, ellipseVRadius.value, 0, 0, T * Math.PI);
   ctx.stroke();
 }
 
