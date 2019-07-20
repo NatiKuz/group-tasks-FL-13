@@ -79,9 +79,33 @@ function drawParallelogram(){
   }
   drawParallelogram();
 
-function calcOval() {
-    console.log('Oval In Progress')
+function calcEllipse() {
+  const ellipseHRadius = document.getElementById('ellipseHRadius');
+  const ellipseVRadius = document.getElementById('ellipseVRadius');
+  const ellipse_Length = document.getElementById('ellipse_Length');
+  const ellipse_Area = document.getElementById('ellipse_Area');
+  ellipse_Length.textContent = parseInt(2 * Math.PI * Math.sqrt((Math.pow(ellipseHRadius.value, 2) + Math.pow(ellipseVRadius.value, 2)) / 2));
+  ellipse_Area.textContent = parseInt(Math.PI * ellipseHRadius.value * ellipseVRadius.value);
+  drawEllipse();
 }
+
+function drawEllipse() {
+  const canvasDiv = document.getElementById('ellipse_img');
+  let canvasEllipse = document.getElementById('canvasEllipse');
+  canvasDiv.removeChild(canvasEllipse);
+  canvasEllipse = document.createElement('canvas');
+  canvasEllipse.setAttribute('id', 'canvasEllipse');
+  canvasEllipse.setAttribute('width',"200");
+  canvasEllipse.setAttribute('height', "150");
+  canvasDiv.appendChild(canvasEllipse);
+  const ctx = canvasEllipse.getContext('2d');
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.ellipse(80, 60, ellipseHRadius.value, ellipseVRadius.value, 0, 0, 2 * Math.PI);
+  ctx.stroke();
+}
+
+drawEllipse();
 
 function calcCircle() {
 
@@ -176,8 +200,7 @@ function calcRectangle() {
 
 function calcAll() {
     calcParal();
-    drawParallelogram();
-    calcOval();
+    calcEllipse();
     calcCircle();
     calcSquare();
     calcRectangle();

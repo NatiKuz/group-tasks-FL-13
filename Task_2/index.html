@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapperrs">
 
             <div class="parallelogram block">
                     <div #="parallelogram_img img-mod">
@@ -59,26 +59,28 @@
                 </div>
         </div>
 
-        <div class="oval block">
+        <div class="ellipse block">
 
-            <div id="oval_img" class="img-mod"></div>
+            <div id="ellipse_img" class="img-mod">
+                <canvas id="canvasEllipse" width="200" height="150"></canvas>
+            </div>
 
-            <div class="oval ui">
+            <div class="ellipse ui">
                 <form action="#" id="oval_form" class="form">
-                    <label for="ovalHRadius">Horizontal R:</label>
-                    <input type="number" value="11" id="ovalHRadius">
+                    <label for="ellipseHRadius">Horizontal R:</label>
+                    <input type="number" value="55" id="ellipseHRadius">
 
-                    <label for="ovalVRadius">Vertical R:</label>
-                    <input type="number" value="5" id="ovalVRadius">
+                    <label for="ellipseVRadius">Vertical R:</label>
+                    <input type="number" value="33" id="ellipseVRadius">
                 </form>
 
-                <div class="oval output">
-                    <p class="oval title">Area: 
-                        <span id="oval_Area">-</span>
+                <div class="ellipse output">
+                    <p class="ellipse title">Area: 
+                        <span id="ellipse_Area">-</span>
                     </p>
 
-                    <p class="oval title">L: 
-                        <span id="oval_Length">-</span>
+                    <p class="ellipse title">L: 
+                        <span id="ellipse_Length">-</span>
                     </p>
                 </div>
             </div>
