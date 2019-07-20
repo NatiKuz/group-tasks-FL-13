@@ -1,7 +1,7 @@
 //for canvas & calc
 
 const size150 = 150;
-const size200 = 150;
+const size200 = 200;
 const start = 10;
 const stroke = 2;
 const angle90 = 90;
