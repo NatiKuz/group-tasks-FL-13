@@ -98,22 +98,28 @@ function drawEllipse() {
   const canvasDiv = document.getElementById('ellipse_img');
   
   const T = 2;
-  const X = 80;
-  const Y = 60;
+  const X = 100;
+  const Y = 100;
+  const maxSize = 180;
   
   let canvasEllipse = document.getElementById('canvasEllipse');
   canvasDiv.removeChild(canvasEllipse);
   canvasEllipse = document.createElement('canvas');
   canvasEllipse.setAttribute('id', 'canvasEllipse');
   canvasEllipse.setAttribute('width','200');
-  canvasEllipse.setAttribute('height', '150');
+  canvasEllipse.setAttribute('height', '200');
   canvasDiv.appendChild(canvasEllipse);
+  let hR = ellipseHRadius.value;
+  let vR = ellipseVRadius.value;
+  let coef = maxSize/(T * Math.max(hR, vR));
+  hR *= coef;
+  vR *= coef;
   const ctx = canvasEllipse.getContext('2d');
   ctx.lineWidth = T;
   ctx.beginPath();
-  ctx.ellipse(X, Y, ellipseHRadius.value, ellipseVRadius.value, 0, 0, T * Math.PI);
+  ctx.ellipse(X, Y, hR, vR, 0, 0, T * Math.PI);
   ctx.stroke();
-}
+  }
 
 drawEllipse();
 
