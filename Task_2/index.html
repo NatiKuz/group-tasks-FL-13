@@ -15,7 +15,7 @@
             <div id="parallelogram_img" class="img-mod"></div>
 
             <div class="parallelogram ui">
-                <form action="#" id="parallelogram_form" class="form">
+                <form oninput='resetValueParal()' id="parallelogram_form" class="form">
                     <label for="parallelogramSideA">A: </label>
                     <input type="number" name="parallelogramSideA" value="10" id="parallelogramSideA">
 
@@ -44,7 +44,7 @@
                 <div id="circle_img" class="img-mod"></div>
     
                 <div class="circle ui">
-                    <form action="#" id="circle_form" class="form">
+                    <form oninput='resetValueCircle()' id="circle_form" class="form">
                         <label for="circleRadius">R:</label>
                         <input type="number" value="4" id="circleRadius">
                     </form>
@@ -68,7 +68,7 @@
             </div>
 
             <div class="ellipse ui">
-                <form action="#" id="oval_form" class="form">
+                <form oninput='resetValueEllipse()' id="oval_form" class="form">
                     <label for="ellipseHRadius">Horizontal R:</label>
                     <input type="number" value="55" id="ellipseHRadius">
 
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div class="square block">
+        <!-- <div class="square block">
 
             <div id="square_img" class="img-mod"></div>
 
@@ -130,7 +130,52 @@
                     </p>
                 </div>
             </div>
+        </div> -->
+
+        <div class="square block">
+
+            <div id="square_img" class="img-mod"></div>
+
+            <div class="square ui">
+                <form id="square_form" class="form">
+                    <label for="squareSideA">A: </label>
+                    <input oninput ='resetValueSquare()' type="number" name="squareSideA" value="100" id="squareSideA">
+                </form>
+
+                <div class="square output">
+                    <p class="square title">Diagonal: 
+                        <span id="square_Diagonal">-</span>
+                    </p>                 
+                    <p class="square title">Area: 
+                        <span id="square_Area">-</span>
+                    </p>
+                </div>
+            </div>
         </div>
+
+        <div class="rectangle block">
+
+            <div id="rectangle_img" class="img-mod"></div>
+
+            <div class="rectangle ui">
+                <form id="rectangle_form" class="form">
+                    <label for="rectangleSideA">A: </label>
+                    <input oninput ='resetValueRectangle()' type="number" name="rectangleSideA" value="100" id="rectangleSideA">
+                    <label for="rectangleSideB">B: </label>
+                    <input oninput ='resetValueRectangle()' type="number" name="rectangleSideB" value="50" id="rectangleSideB">
+                </form>
+
+                <div class="rectangle output">
+                    <p class="rectangle title">Diagonal: 
+                        <span id="rectangle_Diagonal">-</span>
+                    </p>                 
+                    <p class="rectangle title">Area: 
+                        <span id="rectangle_Area">-</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
 
         <div class="triangle block">
 
@@ -139,7 +184,7 @@
                 </div>
 
                 <div class="triangle ui">
-                    <form action="#" class="triangle form">
+                    <form oninput ='resetValueTriangle()' class="triangle form">
                         <label for="triangleSideA">A:</label>
                         <input type="number" value="5" id="triangleSideA">
 
@@ -148,29 +193,37 @@
                     </form>
 
                     <div class="triangle output">
-                        <span class="triangle title">a: </span>
+                        <p class="triangle title">a: 
                         <span id="triangle_sideA">-</span>
+                    </p>
 
-                        <span class="triangle title">b: </span>
-                        <span id="triangle_sideB">-</span>
+                        <p class="triangle title">b: 
+                        <span id="triangle_sideB">-</p>
+                        </p>
 
-                        <span class="triangle title">c: </span>
+                        <span class="triangle title">c: 
                         <span id="triangle_sideC">-</span>
+                    </p>
 
-                        <span class="triangle title">h<sub>c</sub>: </span>
+                        <p class="triangle title">h<sub>c</sub>: 
                         <span id="triangle_Height">-</span>
+                    </p>
                     
-                        <span class="triangle title">angle A: </span>
+                        <p class="triangle title">angle A: 
                         <span id="triangle_angleA">-</span>
+                    </p>
 
-                        <span class="triangle title">angle B: </span>
+                        <p class="triangle title">angle B: 
                         <span id="triangle_angleB">-</span>
+                    </p>
 
-                        <span class="triangle title">angle C: </span>
-                        <span id="triangle_angleC">-</span>                    
+                        <p class="triangle title">angle C: 
+                        <span id="triangle_angleC">-</span>
+                    </p>                    
 
-                        <span class="triangle title">Area: </span>
+                        <p class="triangle title">Area: 
                         <span id="triangle_Area">-</span>
+                        </p>
                     </div>
                 </div>
         </div>

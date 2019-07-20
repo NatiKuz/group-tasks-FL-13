@@ -217,3 +217,53 @@ function calcAll() {
     document.removeEventListener('input', calcAll);
   }
   checkInstant.addEventListener('change', instantCalc);
+
+
+// EVENTLISTENERS
+
+function resetValueParal() {
+  document.getElementById('parallelogram_Area').innerHTML = '-';
+  document.getElementById('parallelogram_Height').innerHTML = '-';
+} 
+
+function resetValueCircle() {
+  document.getElementById('circle_Area').innerHTML = '-';
+  document.getElementById('circle_Length').innerHTML = '-';
+} 
+
+function resetValueEllipse() {
+  document.getElementById('ellipse_Area').innerHTML = '-';
+  document.getElementById('ellipse_Length').innerHTML = '-';
+} 
+
+function resetValueSquare() {
+  document.getElementById('square_Diagonal').innerHTML = '-';
+  document.getElementById('square_Area').innerHTML = '-';
+} 
+
+function resetValueSquare() {
+  document.getElementById('square_Diagonal').innerHTML = '-';
+  document.getElementById('square_Area').innerHTML = '-';
+} 
+
+
+function resetValueRectangle() {
+  document.getElementById('rectangle_Diagonal').innerHTML = '-';
+  document.getElementById('rectangle_Area').innerHTML = '-';
+} 
+
+function resetValueTriangle() {
+  document.getElementById('triangle_sideA').innerHTML = '-';
+  document.getElementById('triangle_sideB').innerHTML = '-';
+  // document.getElementById('triangle_sideB').innerHTML = '-';
+  document.getElementById('triangle_sideC').innerHTML = '-';
+  document.getElementById('triangle_Height').innerHTML = '-';
+  document.getElementById('triangle_angleA').innerHTML = '-';
+  document.getElementById('triangle_angleB').innerHTML = '-';
+  document.getElementById('triangle_angleC').innerHTML = '-';
+  document.getElementById('triangle_Area').innerHTML = '-';
+
+
+
+
+} 
