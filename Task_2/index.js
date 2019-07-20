@@ -13,8 +13,6 @@ function calcParal() {
   let parallelogramArea = 0;
   let parallelogramHeight = 0;
 
-
-
   if(angle === angle90) {
     parallelogramArea = Math.abs(sideA * sideB).toFixed(numAccTo);
     parallelogramHeight = Math.abs(sideB.toFixed(numAccTo));
@@ -172,6 +170,7 @@ function calcAll() {
     drawTriangle();
   }
 
+// INSTANT_CALCULATION
 
   let checkInstant = document.getElementById('instantCalc');
   let btnCalc = document.getElementById('btnCalc');
