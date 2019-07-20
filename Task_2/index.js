@@ -1,15 +1,22 @@
+//for canvas & calc
+
+const size150 = 150;
+const size200 = 150;
+const start = 10;
+const stroke = 2;
+const angle90 = 90;
+const angle180 = 180;
+const byTwo = 2;
+const numAccTo = 3;
+
 function calcParal() {
   let sideA = parseFloat(document.getElementById('parallelogramSideA').value);
   let sideB = parseFloat(document.getElementById('parallelogramSideB').value);
   let angle = Math.abs(parseFloat(document.getElementById('parallelogramAngle').value));
 
   const angle0 = 0;
-  const angle180 = 180;
-  const angle90 = 90;
-  const numAccTo = 3;
   let angleSkewToFigure = angle90 - angle;
   let angleDegToRad = angleSkewToFigure * Math.PI / angle180;
-  let maxFig = 200;
   let parallelogramArea = 0;
   let parallelogramHeight = 0;
 
@@ -29,42 +36,55 @@ function calcParal() {
   }
   document.getElementById('parallelogram_Area').innerHTML = parallelogramArea;
   document.getElementById('parallelogram_Height').innerHTML = parallelogramHeight;
-
-  let figParal = document.getElementById('parallelogram_img');
-  const smallFigCoef = 0.4;
-  const middleFigCoef = 0.7;
-  const smallFigAngle = 10;
-  const middleFigAngle = 35;
-
-  let scale = 1;
-
-  if( angle < smallFigAngle ) {
-    scale = smallFigCoef;
-  } else if (angle < middleFigAngle) {
-    scale = middleFigCoef;
-  }
-
-  if( sideA > sideB && sideA > maxFig) { 
-    sideB *= maxFig / sideA;
-    sideA = maxFig;
-    scale = maxFig / sideA;
-  } else if (sideB > sideA && sideB > maxFig) {
-    sideA *= maxFig / sideB;
-    sideB = maxFig;
-    scale = maxFig / sideB;
-  } 
-
-  figParal.style.width = sideA + 'px'; 
-  figParal.style.height = sideB + 'px';
-  figParal.style = `transform: matrix(${scale},0,${angleDegToRad},${scale},0,0)`;
 }
+
+function drawParallelogram(){
+  let canvas = document.getElementById('canvas_parallelogram');
+  let ctx = canvas.getContext('2d');
+  let a = parseFloat(document.getElementById('parallelogramSideA').value);    
+  let b = parseFloat(document.getElementById('parallelogramSideB').value);  
+  let angle = parseFloat(document.getElementById('parallelogramAngle').value);
+  let alfa = angle;
+  if(alfa<=angle90){
+    alfa = alfa * Math.PI/angle180;
+  } else {
+    alfa = (angle180-alfa) * Math.PI/angle180;
+  }  
+  let h = Math.round(a * Math.sin(alfa));  
+  let l = Math.round(a * Math.cos(alfa));  
+  let coef = size150/Math.max(h, b+l);  
+  b *= coef;
+  l *= coef;
+  h *= coef;
+
+  ctx.clearRect(0, 0, size200, size200);
+  ctx.strokeStyle = 'black';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  if (angle<=angle90){
+    ctx.moveTo(start + l, start);
+    ctx.lineTo(start,start + h);
+    ctx.lineTo(start + b,start + h);
+    ctx.lineTo(start + b + l,start);
+    ctx.lineTo(start + l, start);
+    ctx.stroke();
+  } else {
+    ctx.moveTo(start, start);
+    ctx.lineTo(start +l,start + h);
+    ctx.lineTo(start + l + b,start + h);
+    ctx.lineTo(start + b, start);
+    ctx.lineTo(start, start);
+    ctx.stroke();
+  }
+  }
+  drawParallelogram();
 
 function calcOval() {
     console.log('Oval In Progress')
 }
 
 function calcCircle() {
-  const numAccTo = 3;
+
   let radius = document.getElementById('circleRadius').value;
   let circleArea = (radius * radius * Math.PI).toFixed(numAccTo);
   const NUMBER_TWO = 2;
@@ -109,9 +129,6 @@ function calcRectangle() {
   }
 
   function calcTriangle(){
-    const angle180 = 180;
-    const byTwo = 2;
-
     let a = parseFloat(document.getElementById('triangleSideA').value);
     document.getElementById('triangle_sideA').innerHTML = a;
     let b = parseFloat(document.getElementById('triangleSideB').value);
@@ -131,11 +148,6 @@ function calcRectangle() {
   }
 
   function drawTriangle(){
-    const size150 = 150;
-    const size200 = 150;
-    const start = 10;
-    const stroke = 2;
-
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
     let a = parseFloat(document.getElementById('triangleSideA').value);
@@ -164,12 +176,13 @@ function calcRectangle() {
 
 function calcAll() {
     calcParal();
+    drawParallelogram();
     calcOval();
     calcCircle();
     calcSquare();
     calcRectangle();
     calcTriangle();
-    drawTriangle();
+    drawTriangle();    
   }
 
 
@@ -180,17 +193,9 @@ function calcAll() {
     btnCalc.disabled = this.checked;
     if(this.checked) {
       document.addEventListener('input', calcAll);
-      // doInstantCalc();
     } else {
       document.removeEventListener('input', calcAll);
-      // stopInstantCalc();
     }
   }
   
-  function doInstantCalc() {
-    document.addEventListener('input', calcAll);
-  }
-  function stopInstantCalc() {
-    document.removeEventListener('input', calcAll);
-  }
   checkInstant.addEventListener('change', instantCalc);
